@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makroo Order</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>MAKROO LOGO</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="placeorder.html">Place Order</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Place an Order</h2>
+        <form id="placeorderForm" onsubmit="return calculateTotal()">
+            <label for="customerName">Customer Name</label><br>
+            <input type="text" id="customerName" placeorder="Enter your name" required><br>
+            
+<label>Select Products</label><br>
+<label><input type="checkbox" name="product" value="Black Crown Gin"> Black Crown Gin</label><br>
+<label><input type="checkbox" name="product" value="Kirlwall"> Kirlwall</label><br>
+<label><input type="checkbox" name="product" value="Tonic"> Tonic</label><br>
+<label><input type="checkbox" name="product" value="Royal Crown"> Royal Crown</label><br>
+<label><input type="checkbox" name="product" value="Kinahans"> Kinahans</label><br>
+<label><input type="checkbox" name="product" value="Loch Lomond"> Loch Lomond</label><br>
+<label><input type="checkbox" name="product" value="Black Crown 24"> Black Crown 24</label><br>
+<label><input type="checkbox" name="product" value="Black Crown 6"> Black Crown 6</label><br>
+
+            <fieldset>
+                <legend>Delivery Method</legend>
+                <label><input type="radio" name="delivery" value="delivery" checked> Delivery</label>
+                <label><input type="radio" name="delivery" value="pickup"> Pick Up</label>
+            </fieldset><br>
+
+            <label><input type="checkbox" id="acceptTerms" required> Accept Terms</label><br>
+
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <h3 id="placeorderResult"></h3>
+    </main>
+
+    <footer>
+        &copy; 2025 MAKROO | COME SHOP WITH US
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freshmart Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FRESHMART LOGO</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="placeorder.html">placeorder</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm" onsubmit="return validateFeedback()">
+            <input type="text" id="name" placeholder="Your Name"><br>
+            <textarea id="message" placeholder="Your Message"></textarea><br>
+            <button type="submit">Send Feedback</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2025 MAKROO | Social media icons
+    </footer>
+
+    <script>
+        function validateFeedback() {
+            let name = document.getElementById("name").value;
+            let message = document.getElementById("message").value;
+            if (name === "" || message === "") {
+                alert("Please fill in all fields!");
+                return false;
+            }
+            alert("Thank you for your feedback, " + name + "!");
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MAKROO LOGO</h1>
+    </header>
+
+    <main>
+        <h2>LOGIN AS GUEST</h2>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <input type="text" id="username" placeholder="Name and Surname"><br>
+            <input type="password" id="password" placeholder="Password"><br>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2025 MAKROO | SHOP WITH US
+    </footer>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+
+            // Check name and surname
+            if (username === "" || !username.includes(" ")) {
+                alert("Please enter both name and surname.");
+                return false;
+            }
+
+            // Check password rules
+            if (password.length < 7 || password.length > 20) {
+                alert("Password must be between 7 and 20 characters.");
+                return false;
+            }
+
+            if (password.toLowerCase() === "password") {
+                alert("Password cannot be the word 'password'.");
+                return false;
+            }
+
+            // If all validations pass, redirect to home page
+            window.location.href = "index.html";
+            return false; // prevent form submission refresh
+        }
+    </script>
+</body>
+</html>
